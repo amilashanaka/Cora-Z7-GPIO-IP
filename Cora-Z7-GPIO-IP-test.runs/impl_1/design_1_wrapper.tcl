@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -114,25 +113,25 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.cache/wt [current_project]
-  set_property parent.project_path C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.xpr [current_project]
+  set_property webtalk.parent_dir C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.cache/wt [current_project]
+  set_property parent.project_path C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Projects/ERN24004/digilent/vivado-library-master
-  C:/Projects/ERN24004/IP/ip_repo
+  C:/Projects/ERN24004/digilent/vivado-library-master
+  C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/ip_repo
 } [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.cache/ip [current_project]
+  set_property ip_output_repo C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.srcs/constrs_1/new/coraz7.xdc
+  read_xdc C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.srcs/constrs_1/new/coraz7.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

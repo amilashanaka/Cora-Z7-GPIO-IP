@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
--- Date        : Thu Oct 17 16:34:05 2024
+-- Date        : Thu Nov 21 15:32:51 2024
 -- Host        : DonGun running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ip/design_1_GPIO_Control_0_0/design_1_GPIO_Control_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_GPIO_Control_0_0_sim_netlist.vhdl
 -- Design      : design_1_GPIO_Control_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control_slave_lite_v1_0_S00_AXI is
   port (
     axi_awready_reg_0 : out STD_LOGIC;
     axi_arready_reg_0 : out STD_LOGIC;
@@ -37,11 +37,9 @@ entity design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI is
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI : entity is "GPIO_Control_slave_lite_v1_0_S00_AXI";
-end design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control_slave_lite_v1_0_S00_AXI;
 
-architecture STRUCTURE of design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control_slave_lite_v1_0_S00_AXI is
   signal \FSM_sequential_state_read[0]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_read[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_sequential_state_write[0]_i_1_n_0\ : STD_LOGIC;
@@ -1748,7 +1746,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_GPIO_Control_0_0_GPIO_Control is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control is
   port (
     axi_awready_reg : out STD_LOGIC;
     axi_arready_reg : out STD_LOGIC;
@@ -1770,13 +1768,11 @@ entity design_1_GPIO_Control_0_0_GPIO_Control is
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_bready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_GPIO_Control_0_0_GPIO_Control : entity is "GPIO_Control";
-end design_1_GPIO_Control_0_0_GPIO_Control;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control;
 
-architecture STRUCTURE of design_1_GPIO_Control_0_0_GPIO_Control is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control is
 begin
-GPIO_Control_slave_lite_v1_0_S00_AXI_inst: entity work.design_1_GPIO_Control_0_0_GPIO_Control_slave_lite_v1_0_S00_AXI
+GPIO_Control_slave_lite_v1_0_S00_AXI_inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control_slave_lite_v1_0_S00_AXI
      port map (
       axi_arready_reg_0 => axi_arready_reg,
       axi_awready_reg_0 => axi_awready_reg,
@@ -1803,7 +1799,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_GPIO_Control_0_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     leds : out STD_LOGIC_VECTOR ( 5 downto 0 );
     switches : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -1830,16 +1826,16 @@ entity design_1_GPIO_Control_0_0 is
     s00_axi_rready : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of design_1_GPIO_Control_0_0 : entity is true;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_GPIO_Control_0_0 : entity is "design_1_GPIO_Control_0_0,GPIO_Control,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "design_1_GPIO_Control_0_0,GPIO_Control,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of design_1_GPIO_Control_0_0 : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_1_GPIO_Control_0_0 : entity is "GPIO_Control,Vivado 2024.1.2";
-end design_1_GPIO_Control_0_0;
+  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "GPIO_Control,Vivado 2024.1.2";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of design_1_GPIO_Control_0_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   signal \<const0>\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of s00_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK";
@@ -1876,7 +1872,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-inst: entity work.design_1_GPIO_Control_0_0_GPIO_Control
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_GPIO_Control
      port map (
       axi_arready_reg => s00_axi_arready,
       axi_awready_reg => s00_axi_awready,

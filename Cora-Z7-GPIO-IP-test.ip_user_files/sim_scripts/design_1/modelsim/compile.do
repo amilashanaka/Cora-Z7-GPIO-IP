@@ -3,10 +3,10 @@ vlib modelsim_lib/msim
 
 vlib modelsim_lib/msim/xilinx_vip
 vlib modelsim_lib/msim/xpm
-vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/axi_infrastructure_v1_1_0
 vlib modelsim_lib/msim/axi_vip_v1_1_18
 vlib modelsim_lib/msim/processing_system7_vip_v1_0_20
+vlib modelsim_lib/msim/xil_defaultlib
 vlib modelsim_lib/msim/lib_cdc_v1_0_3
 vlib modelsim_lib/msim/proc_sys_reset_v5_0_15
 vlib modelsim_lib/msim/generic_baseblocks_v2_1_2
@@ -17,10 +17,10 @@ vlib modelsim_lib/msim/axi_protocol_converter_v2_1_32
 
 vmap xilinx_vip modelsim_lib/msim/xilinx_vip
 vmap xpm modelsim_lib/msim/xpm
-vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap axi_infrastructure_v1_1_0 modelsim_lib/msim/axi_infrastructure_v1_1_0
 vmap axi_vip_v1_1_18 modelsim_lib/msim/axi_vip_v1_1_18
 vmap processing_system7_vip_v1_0_20 modelsim_lib/msim/processing_system7_vip_v1_0_20
+vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap lib_cdc_v1_0_3 modelsim_lib/msim/lib_cdc_v1_0_3
 vmap proc_sys_reset_v5_0_15 modelsim_lib/msim/proc_sys_reset_v5_0_15
 vmap generic_baseblocks_v2_1_2 modelsim_lib/msim/generic_baseblocks_v2_1_2
@@ -47,11 +47,6 @@ vlog -work xpm  -incr -mfcu  -sv -L axi_vip_v1_1_18 -L processing_system7_vip_v1
 vcom -work xpm  -93  \
 "C:/Xilinx/Vivado/2024.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/d47c/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/360f/hdl/GPIO_Control_slave_lite_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/360f/hdl/GPIO_Control.v" \
-"../../../bd/design_1/ip/design_1_GPIO_Control_0_0/sim/design_1_GPIO_Control_0_0.v" \
-
 vlog -work axi_infrastructure_v1_1_0  -incr -mfcu  "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/d47c/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
@@ -63,6 +58,9 @@ vlog -work processing_system7_vip_v1_0_20  -incr -mfcu  -sv -L axi_vip_v1_1_18 -
 
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/d47c/hdl" "+incdir+C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ipshared/360f/hdl/GPIO_Control_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/360f/hdl/GPIO_Control.v" \
+"../../../bd/design_1/ip/design_1_GPIO_Control_0_0/sim/design_1_GPIO_Control_0_0.v" \
 
 vcom -work lib_cdc_v1_0_3  -93  \
 "../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \

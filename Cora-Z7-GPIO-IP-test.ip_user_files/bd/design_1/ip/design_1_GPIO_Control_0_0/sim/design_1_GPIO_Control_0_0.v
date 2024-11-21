@@ -79,8 +79,8 @@ module design_1_GPIO_Control_0_0 (
   s00_axi_rready
 );
 
-output wire [7 : 0] leds;
-input wire [7 : 0] switches;
+output wire [5 : 0] leds;
+input wire [1 : 0] switches;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
@@ -131,8 +131,8 @@ input wire s00_axi_rready;
   GPIO_Control #(
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
     .C_S00_AXI_ADDR_WIDTH(4),  // Width of S_AXI address bus
-    .LED_WIDTH(8),
-    .SWITCH_WIDTH(8)
+    .LED_WIDTH(6),
+    .SWITCH_WIDTH(2)
   ) inst (
     .leds(leds),
     .switches(switches),

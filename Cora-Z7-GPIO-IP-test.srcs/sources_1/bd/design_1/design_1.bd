@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x933904082B6B140A",
+      "boundary_crc": "0x9339040884AB6A73",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../Cora-Z7-GPIO-IP-test.gen/sources_1/bd/design_1",
       "name": "design_1",

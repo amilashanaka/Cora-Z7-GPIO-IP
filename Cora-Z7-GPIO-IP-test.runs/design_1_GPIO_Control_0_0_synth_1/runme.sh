@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP-test/Cora-Z7-GPIO-IP-test.runs/design_1_GPIO_Control_0_0_synth_1'
+HD_PWD='C:/Projects/ERN24004/Projects/Cora-Z7-GPIO-IP/Cora-Z7-GPIO-IP-test.runs/design_1_GPIO_Control_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

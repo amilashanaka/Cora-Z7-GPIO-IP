@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.1.2 (win64) Build 5164865 Thu Sep  5 14:37:11 MDT 2024
-//Date        : Thu Oct 17 16:26:53 2024
+//Date        : Thu Nov 21 15:31:51 2024
 //Host        : DonGun running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -56,10 +56,10 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  output [7:0]leds_0;
+  output [5:0]leds_0;
   input [7:0]switches_0;
 
-  wire [7:0]GPIO_Control_0_leds;
+  wire [5:0]GPIO_Control_0_leds;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -143,7 +143,7 @@ module design_1
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
   wire [7:0]switches_0_1;
 
-  assign leds_0[7:0] = GPIO_Control_0_leds;
+  assign leds_0[5:0] = GPIO_Control_0_leds;
   assign switches_0_1 = switches_0[7:0];
   design_1_GPIO_Control_0_0 GPIO_Control_0
        (.leds(GPIO_Control_0_leds),
@@ -168,7 +168,7 @@ module design_1
         .s00_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s00_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
         .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .switches(switches_0_1));
+        .switches(switches_0_1[1:0]));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
